@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title>Software Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href= "{{url_for('static',filename='home.css')}}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="light-grey">
+
+<div class="content" style="max-width:1400px">
+
+<header class="container center padding-32">
+  <h1><b>Stock Marketing Web Page</b></h1>
+</header>
+
+<header class="container padding-8 margin-top">
+  <ul class="menu">
+    <li><a href = "{{ url_for('home') }}">Home</a></li>
+    <li><a href = "{{ url_for('about') }}">About</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Individual Company Stats</button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('apple') }}">Apple</a><br>
+        <a href="{{ url_for('amazon') }}">Amazon</a><br>
+        <a href="{{ url_for('bhathaway') }}">B. Hathaway</a><br>
+        <a href="{{ url_for('disney') }}">Disney</a><br>
+        <a href="{{ url_for('facebook') }}">Facebook</a><br>
+        <a href="{{ url_for('google') }}">Google</a><br>
+        <a href="{{ url_for('microsoft') }}">Microsoft</a><br>
+        <a href="{{ url_for('tesla') }}">Tesla</a>
+      </div>
+    </div></li>
+    <li><a href= "{{ url_for('comp')}}">Comparison</a></li>
+  </ul>
+</header>
+
+<div class="row">
+
+<div class="col l8 s12">
+  <div class="card-4 margin white">
+    <div class="container">
+      <h3><b>Google Stocks</b></h3>
+    </div>
+
+    <div class="container">
+      <p>Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, search engine, cloud computing, software, and hardware. Google was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University, California. Together, they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a privately held company on September 4, 1998. An Initial public offering (IPO) took place on August 19, 2004, and Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="image-home"><img src="/static/image1.png" width="600" height="300"></div>
+  <hr>
+
+  <div class="card-4 margin white">
+    <div class="container">
+      <h3><b>Apple Stocks</b></h3>
+    </div>
+
+    <div class="container">
+      <p>Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. The company's hardware products include the iPhone smartphone, the iPad tablet computer, the Mac personal computer, the iPod portable media player, the Apple Watch smartwatch, the Apple TV digital media player, and the HomePod smart speaker. Apple's software includes the macOS and iOS operating systems, the iTunes media player, the Safari web browser, and the iLife and iWork creativity and productivity suites, as well as professional applications like Final Cut Pro, Logic Pro, and Xcode. Its online services include the iTunes Store, the iOS App Store and Mac App Store, Apple Music, and iCloud.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="image-home"><img src="/static/image2.png"  width="600" height="300"></div>
+  <hr>
+</div>
+
+<div class="col l4">
+  <div class="card margin">
+    <div class="container padding">
+      <h4>News Feed</h4>
+    </div>
+    <ul class="ul hoverable white">
+      <li class="padding-16">
+        <a href = "https://www.moneycontrol.com/news/business/earnings/hdfc-q4-profit-jumps-39-to-rs-2846-cr-exceeds-expectations-2560073.html" target= "_blank"><span>HDFC Q4 profit jumps 39% to Rs 2,846 cr on stake sale of two subsidiaries and lower tax costs</span></a>
+      </li>
+      <li class="padding-16">
+        <a href = "https://www.hindustantimes.com/business-news/india-s-35-billion-pension-fund-may-get-a-stock-market-boost-soon/story-OEP6PCeZPZSqPOzpSoao9N.html" target= "_blank"><span>India’s $35 billion pension fund may get a stock market boost soon</span></a>
+      </li>
+      <li class="padding-16">
+        <a href = "http://in.pcmag.com/apple-1/120790/news/apples-troubles-in-india-continue-as-market-share-in-premium" target= "_blank"><span>Apple’s troubles in India continue as market-share in premium segment falls by 55 percent</span></a>
+      </li>
+      <li class="padding-16 hide-medium hide-small">
+        <a href = "https://www.livemint.com/Money/OfYZEaEeLLlQwfwC7AmvoL/Indian-markets-look-at-an-earningsheavy-week-RIL-stock-au.html" target= "_blank"><span>Indian markets look at an earnings-heavy week; RIL stock, auto sales key</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div><br>
+
+</div>
+</body>
+</html>

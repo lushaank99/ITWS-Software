@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Software Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href= "{{url_for('static',filename='home.css')}}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="light-grey">
+
+<div class="content" style="max-width:1400px">
+
+<header class="container center padding-32">
+  <h1><b>Stock Marketing Web Page</b></h1>
+  <h3>Individual Companies Page</h3>
+</header>
+
+<header class="container padding-8 margin-top">
+  <ul class="menu">
+    <li><a href = "{{ url_for('home') }}">Home</a></li>
+    <li><a href = "{{ url_for('about') }}">About</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Individual Company Stats</button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('apple') }}">Apple</a><br>
+        <a href="{{ url_for('amazon') }}">Amazon</a><br>
+        <a href="{{ url_for('bhathaway') }}">B. Hathaway</a><br>
+        <a href="{{ url_for('disney') }}">Disney</a><br>
+        <a href="{{ url_for('facebook') }}">Facebook</a><br>
+        <a href="{{ url_for('google') }}">Google</a><br>
+        <a href="{{ url_for('microsoft') }}">Microsoft</a><br>
+        <a href="{{ url_for('tesla') }}">Tesla</a>
+      </div>
+    </div></li>
+    <li><a href= "{{ url_for('comp')}}">Comparison</a></li>
+  </ul>
+</header>
+
+{%block content%}
+{%endblock%}
+
+</div>
+
+</body>
+</html>
